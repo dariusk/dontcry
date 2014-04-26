@@ -1,5 +1,6 @@
 var songPlaying = false;
-var songHangdle = null;
+var songHandle = null;
+var oldSample = null;
 
 $(document).ready( function() {
   lowLag.init({
@@ -15,7 +16,7 @@ $(document).ready( function() {
 
 function song() {
   if (songPlaying) {
-    clearInterval(songHangle);
+    clearInterval(songHandle);
   }
   else {
     ac = 0;
@@ -23,6 +24,9 @@ function song() {
     songHangle = setInterval(function() { 
       if (a[ac % a.length] !== '') {
         lowLag.play(a[ac % a.length]);
+        if (oldSample) document.getElementById(oldSample).style.background = 'gray';
+        document.getElementById(a[ac % a.length]).style.background = 'yellow';
+        oldSample = a[ac % a.length];
       }
       ac++;
     }, 350);
