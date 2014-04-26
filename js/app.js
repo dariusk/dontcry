@@ -21,7 +21,7 @@ function song() {
   else {
     ac = 0;
     a = ['baby','baby','snarechord','','kick','kick','snarechord',''];
-    songHangle = setInterval(function() { 
+    songHandle = setInterval(function() { 
       if (a[ac % a.length] !== '') {
         lowLag.play(a[ac % a.length]);
         if (oldSample) document.getElementById(oldSample).style.background = 'gray';
