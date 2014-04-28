@@ -2,6 +2,7 @@ var songPlaying = false;
 var songHandle = null;
 var oldSample = null;
 var ac, pattern, ones, twos, halves;
+var kicksnare = true;
 
 $(document).ready( function() {
   lowLag.init({
@@ -15,6 +16,8 @@ $(document).ready( function() {
   lowLag.load(['arms1.wav'],'arms');
   lowLag.load(['arms2.wav'],'arms2');
   lowLag.load(['kick.wav'],'kick');
+  lowLag.load(['kick2.wav'],'kick2');
+  lowLag.load(['snare.wav'],'snare');
   lowLag.load(['stringbass.wav'],'stringbass');
   lowLag.load(['guithi1.wav'],'guithi');
   lowLag.load(['guitlo2.wav'],'guitlo');
@@ -28,6 +31,9 @@ function song() {
     ac = 0;
     pattern = ['baby','baby','guithi','guitlo','ehvamp','ehvampb','arms','arms2'];
     songHandle = setInterval(function() { 
+      var beat = ac % 4;
+      if (kicksnare && beat === 0) { lowLag.play('kick2'); }
+      if (kicksnare && beat === 2) { lowLag.play('snare'); }
       var ind = ac % pattern.length;
       if (pattern[ind] !== '') {
         lowLag.play(pattern[ind]);
@@ -52,6 +58,9 @@ function songRand() {
     ac = 0;
     pattern = ['baby','baby','guithi','guitlo','ehvamp','ehvampb','arms','arms2'];
     songHandle = setInterval(function() { 
+      var beat = ac % 4;
+      if (kicksnare && beat === 0) { lowLag.play('kick2'); }
+      if (kicksnare && beat === 2) { lowLag.play('snare'); }
       var ind = Math.floor(Math.random()*pattern.length);
       if (pattern[ind] !== '') {
         lowLag.play(pattern[ind]);
@@ -82,6 +91,7 @@ function songOneTwo() {
       if (beat === 0) {
         var thisSample = ones[Math.floor(Math.random()*ones.length)];
         lowLag.play(thisSample);
+        if (kicksnare) { lowLag.play('kick2'); }
         if (oldSample) {
           document.getElementById(oldSample).style.background = 'gray';
         }
@@ -89,6 +99,7 @@ function songOneTwo() {
         oldSample = thisSample;
       }
       else if (beat === 2) {
+        if (kicksnare) { lowLag.play('snare'); }
         var thisSample = twos[Math.floor(Math.random()*twos.length)];
         lowLag.play(thisSample);
         if (oldSample) {

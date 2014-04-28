@@ -10,21 +10,26 @@
     <h2>On J. Dilla's "Don't Cry"</h2>
     <h3>by Darius Kazemi</h3>
     <div id="content">
-      <button id="baby" onclick="lowLag.play('baby');">baby</button>
-      <button id="flourish" onclick="lowLag.play('flourish');">flourish</button>
-      <button id="ehvamp" onclick="lowLag.play('ehvamp');">ehvamp</button>
-      <button id="ehvampb" onclick="lowLag.play('ehvampb');">ehvampb</button>
-      <button id="arms" onclick="lowLag.play('arms');">arms</button>
-      <button id="arms2" onclick="lowLag.play('arms2');">arms2</button>
-      <button id="kick" onclick="lowLag.play('kick');">kick</button>
-      <button id="snarechord" onclick="lowLag.play('snarechord');">snarechord</button>
-      <button id="stringbass" onclick="lowLag.play('stringbass');">stringbass</button>
-      <button id="guithi" onclick="lowLag.play('guithi');">guithi</button>
-      <button id="guitlo" onclick="lowLag.play('guitlo');">guitlo</button>
-      <br>
-      <button onclick="song()">play beat (click again to stop)</button>
+      <p>All the below samples are half-second chunks from <a href="https://www.youtube.com/watch?v=ItfkjVmOcrE">"I Can't Stand (To See You Cry)"</a> by The Escorts (1974), itself a cover of The Whatnauts' <a href="https://www.youtube.com/watch?v=fS3-F0Ft0aQ">"I Can't Stand to See You Cry"</a> (1973).</p>
+      <p>
+        <button id="baby" onclick="lowLag.play('baby');">baby</button>
+        <button id="guithi" onclick="lowLag.play('guithi');">guithi</button>
+        <button id="guitlo" onclick="lowLag.play('guitlo');">guitlo</button>
+        <button id="ehvamp" onclick="lowLag.play('ehvamp');">ehvamp</button>
+        <button id="ehvampb" onclick="lowLag.play('ehvampb');">ehvampb</button>
+        <button id="arms" onclick="lowLag.play('arms');">arms</button>
+        <button id="arms2" onclick="lowLag.play('arms2');">arms2</button>
+      </p>
+      <p>Press this to play a very short beat from J. Dilla's "Don't Cry", which I've reconstructed by picking the above samples (this took me ~6 hours of careful listening to both songs). You can press the buttons below and listen to the different samples.</p>
+      <p>
+        <button onclick="song()">play beat (click again to stop)</button>
+      </p>
+      <p>For this particular loop, Dilla took miniscule bits of sound from a three-minute-long song, usually grabbing little kick and snare hits at the end of vocal phrases where the instruments were isolated in the mix, but also sometimes picking hits where there was a remnant of vocals. He was also more metivculous than I would have guessed. If you imagine a beat as "One and two and three and four and" (repeating), most producers will snip out "one and", "two and", "three and", "four and" from their sample sources. They'll grab those from different parts of a song (a "one and" from the first verse, a "two and" from the bridge). Dilla chopped things up like, "one", "and", "two", "and", "three", "and", "four", "and". This is really meticulous reconstruction work, and it allowed him to take a "one and" where the "and" half might have had a vocal coming in to mess it up, and instead stitch in an "and" from somewhere else. The result is like a record skipping all around the platter, a half second at a time.</p>
       <button onclick="songRand()">play random (click again to stop)</button>
+      <br>
       <button onclick="songOneTwo()">play random, keep ones/twos (click again to stop)</button>
+      <br>
+      <input onclick="kicksnare = kicksnare ? false : true;" type="checkbox" id="kick" checked>add kick/snare</input>
     </div>
  
     <script src="lib/lowLag.js"></script>
