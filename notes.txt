@@ -6,5 +6,20 @@ ehvamp -2:14
 flourish 2:16
 arms 1:58
 kick 2:01
+ryyy 1:28.85
+guithi 1:06
+guitlo 1:01.336
+arms2 1:17
 
 158?
+
+loop to reconstruct: ~44.5 to ~50
+
+baby baby
+guithi guitlo
+ehvamp
+arms arms2
+kick kick
+some snare plus the stringbass sample retriggered once
+a heavy kick+piano
+snare and ryyy

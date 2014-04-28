@@ -1,5 +1,6 @@
 {
   "curly": true,
+  "browser": true,
   "eqeqeq": true,
   "immed": true,
   "latedef": true,
@@ -14,11 +15,7 @@
   "quotmark": "single",
   "-W065": true,
   "globals": {
-    "InflectionJS": true,
-    "window": true,
     "$": true,
-    "twttr": true,
-    "key": true,
-    "unescape": true
+    "lowLag": true
   }
 }
