@@ -8,19 +8,19 @@ $(document).ready( function() {
   lowLag.init({
     'urlPrefix':'audio/'
   });
-  lowLag.load(['baby1.wav'],'baby');
-  lowLag.load(['flourish.wav'],'flourish');
-  lowLag.load(['snarechord1.wav'],'snarechord');
-  lowLag.load(['ehvamp1.wav'],'ehvamp');
-  lowLag.load(['ehvamp2b.wav'],'ehvampb');
-  lowLag.load(['arms1.wav'],'arms');
-  lowLag.load(['arms2.wav'],'arms2');
-  lowLag.load(['kick.wav'],'kick');
-  lowLag.load(['kick2.wav'],'kick2');
-  lowLag.load(['snare.wav'],'snare');
-  lowLag.load(['stringbass.wav'],'stringbass');
-  lowLag.load(['guithi1.wav'],'guithi');
-  lowLag.load(['guitlo2.wav'],'guitlo');
+  lowLag.load(['baby1.wav','baby1.mp3'],'baby');
+  lowLag.load(['flourish.wav','flourish.mp3'],'flourish');
+  lowLag.load(['snarechord1.wav','snarechord1.mp3'],'snarechord');
+  lowLag.load(['ehvamp1.wav','ehvamp1.mp3'],'ehvamp');
+  lowLag.load(['ehvamp2b.wav','ehvamp2b.mp3'],'ehvampb');
+  lowLag.load(['arms1.wav','arms1.mp3'],'arms');
+  lowLag.load(['arms2.wav','arms2.mp3'],'arms2');
+  lowLag.load(['kick.wav','kick.mp3'],'kick');
+  lowLag.load(['kick2.wav','kick2.mp3'],'kick2');
+  lowLag.load(['snare.wav','snare.mp3'],'snare');
+  lowLag.load(['stringbass.wav','stringbass.mp3'],'stringbass');
+  lowLag.load(['guithi3.wav','guithi3.mp3'],'guithi');
+  lowLag.load(['guitlo2.wav','guitlo2.mp3'],'guitlo');
 });
 
 function song() {
