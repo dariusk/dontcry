@@ -21,6 +21,13 @@ $(document).ready( function() {
   lowLag.load(['stringbass.wav','stringbass.mp3'],'stringbass');
   lowLag.load(['guithi3.wav','guithi3.mp3'],'guithi');
   lowLag.load(['guitlo2.wav','guitlo2.mp3'],'guitlo');
+  lowLag.load(['mykick2.wav'],'mykick');
+  lowLag.load(['new1.wav'],'myhit');
+  lowLag.load(['new2.wav'],'myhit2');
+  lowLag.load(['guitvain.wav'],'myhit3');
+  lowLag.load(['snarestand.wav'],'myhit4');
+  lowLag.load(['breath.wav'],'breath');
+  lowLag.load(['oohbass.wav'],'oohbass');
 });
 
 function song() {
@@ -83,9 +90,9 @@ function songOneTwo() {
   }
   else {
     ac = 0;
-    ones = ['baby', 'ehvamp'];
-    twos = ['guithi', 'arms'];
-    halves = ['baby','ehvampb', 'guitlo', 'arms2'];
+    ones = ['baby', 'ehvamp', 'mykick', 'kick'];
+    twos = ['guithi', 'arms', 'myhit', 'myhit4','myhit3'];
+    halves = ['baby','ehvampb', 'guitlo', 'arms2', 'myhit2', 'breath', 'oohbass'];
     songHandle = setInterval(function() { 
       var beat = ac % 4;
       if (beat === 0) {
