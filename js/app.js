@@ -28,6 +28,11 @@ $(document).ready( function() {
   lowLag.load(['snarestand.wav'],'myhit4');
   lowLag.load(['breath.wav'],'breath');
   lowLag.load(['oohbass.wav'],'oohbass');
+  lowLag.load(['flourish.wav'],'flourish');
+  lowLag.load(['crybass.wav'],'crybass');
+  lowLag.load(['tearsbass.wav'],'tearsbass');
+  lowLag.load(['hornkick.wav'],'hornkick');
+  lowLag.load(['stand.wav'],'stand');
 });
 
 function song() {
@@ -90,13 +95,14 @@ function songOneTwo() {
   }
   else {
     ac = 0;
-    ones = ['baby', 'ehvamp', 'mykick', 'kick'];
-    twos = ['guithi', 'arms', 'myhit', 'myhit4','myhit3'];
-    halves = ['baby','ehvampb', 'guitlo', 'arms2', 'myhit2', 'breath', 'oohbass'];
+    ones = ['baby', 'ehvamp', 'kick', 'tearsbass', 'hornkick', 'stand'];
+    twos = ['guithi', 'arms', 'myhit', 'myhit4','myhit3', 'flourish'];
+    halves = ['baby','ehvampb', 'guitlo', 'arms2', 'myhit2', 'breath', 'oohbass', 'flourish', 'crybass', 'stand', 'kick'];
     songHandle = setInterval(function() { 
       var beat = ac % 4;
+      var thisSample;
       if (beat === 0) {
-        var thisSample = ones[Math.floor(Math.random()*ones.length)];
+        thisSample = ones[Math.floor(Math.random()*ones.length)];
         lowLag.play(thisSample);
         if (kicksnare) { lowLag.play('kick2'); }
         if (oldSample) {
@@ -107,7 +113,7 @@ function songOneTwo() {
       }
       else if (beat === 2) {
         if (kicksnare) { lowLag.play('snare'); }
-        var thisSample = twos[Math.floor(Math.random()*twos.length)];
+        thisSample = twos[Math.floor(Math.random()*twos.length)];
         lowLag.play(thisSample);
         if (oldSample) {
           document.getElementById(oldSample).style.background = 'gray';
@@ -116,7 +122,7 @@ function songOneTwo() {
         oldSample = thisSample;
       }
       else {
-        var thisSample = halves[Math.floor(Math.random()*halves.length)];
+        thisSample = halves[Math.floor(Math.random()*halves.length)];
         lowLag.play(thisSample);
         if (oldSample) {
           document.getElementById(oldSample).style.background = 'gray';
