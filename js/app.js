@@ -33,6 +33,73 @@ $(document).ready( function() {
   lowLag.load(['tearsbass.wav'],'tearsbass');
   lowLag.load(['hornkick.wav'],'hornkick');
   lowLag.load(['stand.wav'],'stand');
+
+  $(document).keypress(function(e) {
+    switch (e.which) {
+      // ones
+      case 113:
+        lowLag.play('baby');
+        break;
+      case 119:
+        lowLag.play('ehvamp');
+        break;
+      case 101:
+        lowLag.play('kick');
+        break;
+      case 114:
+        lowLag.play('tearsbass');
+        break;
+      case 116:
+        lowLag.play('hornkick');
+        break;
+      case 121:
+        lowLag.play('stand');
+        break;
+      // twos
+      case 97:
+        lowLag.play('guithi');
+        break;
+      case 115:
+        lowLag.play('arms');
+        break;
+      case 100:
+        lowLag.play('myhit');
+        break;
+      case 102:
+        lowLag.play('myhit3');
+        break;
+      case 103:
+        lowLag.play('myhit4');
+        break;
+      case 104:
+        lowLag.play('flourish');
+        break;
+      // halves
+      case 98:
+        lowLag.play('guitlo');
+        break;
+      case 122:
+        lowLag.play('ehvampb');
+        break;
+      case 120:
+        lowLag.play('arms2');
+        break;
+      case 99:
+        lowLag.play('myhit2');
+        break;
+      case 118:
+        lowLag.play('breath');
+        break;
+      case 98:
+        lowLag.play('oohbass');
+        break;
+      case 110:
+        lowLag.play('crybass');
+        break;
+    }
+  });
+
+
 });
 
 function song() {
